@@ -2,7 +2,6 @@ import 'package:appi_co/bookdata.dart';
 import 'package:appi_co/mybook.dart';
 import 'package:flutter/material.dart';
 
-
 void main() => runApp(const MyWidget());
 
 class MyWidget extends StatelessWidget {
@@ -73,7 +72,7 @@ class _HomePage extends State<HomePage> {
                       filled: true,
                       fillColor: const Color.fromARGB(230, 201, 196, 236),
                       prefixIcon: const Icon(Icons.search),
-                      hintText: "Looking for something?",
+                      hintText: "Looking for SOMBIT?",
                       hintStyle: const TextStyle(fontStyle: FontStyle.italic),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(50.0),
