@@ -1,5 +1,4 @@
-import 'package:appi_co/bookdata.dart';
-import 'package:appi_co/mybook.dart';
+import 'package:appi_co/booklist.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyWidget());
@@ -9,14 +8,14 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: Booklist(),
     );
   }
 }
 
-class HomePage extends StatefulWidget {
+/*class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
@@ -24,10 +23,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePage extends State<HomePage> {
-  List<BookData> books = [
-    BookData("assets/b20.jpg", "Harry Potter And The Prison Of Azkaban",
-        "Author : JK Rowling", 4.7),
-  ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -91,18 +87,13 @@ class _HomePage extends State<HomePage> {
                   ),
                 ),
 
-                const SizedBox(
-                  height: 12.0,
-                ),
+               /* Scrollbar(child: ListView(scrollDirection: Axis.horizontal,
+                children: [
 
-                //Creating List
-                Container(
-                  width: double.infinity,
-                  height: 250.0,
-                  child: ListView(
-                    children: [mybook(books[0])],
-                  ),
-                )
+                ],))*/
+
+             
+                
               ], //children
             ),
           ),
@@ -110,4 +101,4 @@ class _HomePage extends State<HomePage> {
       ),
     );
   }
-}
+}*/

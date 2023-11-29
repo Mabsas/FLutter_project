@@ -1,13 +1,12 @@
 //Collecting BOokdata
 
 class BookData {
-  String bookcover;
-  String bookname;
-  String author;
+  final String bookcover;
+  final String bookname;
+  final String author;
   //String description;
   //int pagenum;
-  double rating;
+  final double rating;
 
-  BookData(this.bookcover, this.bookname, this.author,
-       this.rating);
+  BookData(this.bookcover, this.bookname, this.author, this.rating);
 }
