@@ -72,7 +72,7 @@ class _HomePage extends State<HomePage> {
                       filled: true,
                       fillColor: const Color.fromARGB(230, 201, 196, 236),
                       prefixIcon: const Icon(Icons.search),
-                      hintText: "Looking for something?",
+                      hintText: "Looking for anything?",
                       hintStyle: const TextStyle(fontStyle: FontStyle.italic),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(50.0),
