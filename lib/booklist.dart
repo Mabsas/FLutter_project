@@ -2,6 +2,8 @@ import 'package:appi_co/About.dart';
 import 'package:appi_co/bookdata.dart';
 import 'package:flutter/material.dart';
 
+//Taking information  books  and displaying first page image , author ,rating 
+
 class Booklist extends StatelessWidget {
   Booklist({super.key});
   final List<BookData> books = [
@@ -45,7 +47,7 @@ class Booklist extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         // FIRST container FIRST BOOK
-        child: SingleChildScrollView(
+        child: SingleChildScrollView(   // when text goes beyond emulator screenlimit give free movement
           child: Column(
             children: [
               TextField(
@@ -81,7 +83,7 @@ class Booklist extends StatelessWidget {
                   trailing: const Icon(Icons.favorite),
 
                   //ontap function
-                  onTap: () {
+                  onTap: () {         // Tap to move to second page
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -116,7 +118,7 @@ class Booklist extends StatelessWidget {
                   trailing: const Icon(Icons.favorite),
 
                   //ontap function
-                  onTap: () {
+                  onTap: () {     //Tap to move to second page
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -151,7 +153,7 @@ class Booklist extends StatelessWidget {
                   trailing: const Icon(Icons.favorite),
 
                   //ontap function
-                  onTap: () {
+                  onTap: () {       //Tap to move to second page
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -186,7 +188,7 @@ class Booklist extends StatelessWidget {
                   trailing: const Icon(Icons.favorite),
 
                   //ontap function
-                  onTap: () {
+                  onTap: () {         //Tap to move to second page
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -220,7 +222,7 @@ class Booklist extends StatelessWidget {
 
                   trailing: const Icon(Icons.favorite),
                   //ontap function
-                  onTap: () {
+                  onTap: () {       //Tap to move to second page
                     Navigator.push(
                         context,
                         MaterialPageRoute(

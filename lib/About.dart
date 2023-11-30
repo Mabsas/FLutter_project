@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+
+// Information related to second page
+
 class AboutBook extends StatelessWidget {
   final String writer;
   final String name;
