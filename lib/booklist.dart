@@ -105,9 +105,16 @@ class _BooklistState extends State<Booklist> {
 class Booklist extends StatelessWidget {
   Booklist({super.key});
   final List<BookData> books = [
-    BookData("assets/books/b20.jpg", "Harry potter", "JK Rowling", 4.7),
-    BookData("assets/books/b12.jpg", "Dance with the Dragons",
+    BookData("assets/books/b20.jpg", "HARRY POTTER AND THE CHAMBER OF SECRETS",
+        "JK Rowling", 4.7),
+    BookData("assets/books/b12.jpg", "DANCE WITH THE DRAGONS",
         "George R.R Martin", 5.0),
+    BookData("assets/books/b16.jpg", "THE WORLD OF ICE AND FIRE ",
+        "George R.R Martin", 4.8),
+    BookData("assets/books/b13.jpg", "A FEAST FOR THE CROWS",
+        "George R.R Martin", 4.9),
+    BookData("assets/books/b14.jpg", "LAST ARGUMENT OF KINGS",
+        "Joe Abercrombie", 4.3)
   ];
 
   @override
@@ -135,21 +142,42 @@ class Booklist extends StatelessWidget {
           )
         ],
       ),
-      body: ListView.builder(
-        itemCount: books.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            leading: Image.asset(
-              books[0].bookcover,
-              width: 50,
-              height: 50,
-              fit: BoxFit.cover,
+      body: Column(
+        // FIRST CARD FIRST BOOK
+        children: [
+          Card(
+            child: ListTile(
+              leading: Image.asset(
+                books[0].bookcover,
+                width: 70,
+                height: 70,
+                fit: BoxFit.cover,
+              ),
+              title: Text(books[0].bookname),
+              subtitle: Text(
+                  'Author: ${books[0].author}\nRating: ${books[0].rating.toString()}'),
+
+              //ontap function
             ),
-            title: Text(books[0].bookname),
-            subtitle: Text(
-                'Author: ${books[0].author}\nRating: ${books[0].rating.toString()}'),
-          );
-        },
+          ),
+
+          //2nd CARD second book
+          Card(
+            child: ListTile(
+              leading: Image.asset(
+                books[1].bookcover,
+                width: 70,
+                height: 70,
+                fit: BoxFit.cover,
+              ),
+              title: Text(books[1].bookname),
+              subtitle: Text(
+                  'Author: ${books[1].author}\nRating: ${books[1].rating.toString()}'),
+
+              //ontap function
+            ),
+          )
+        ],
       ),
     );
   }
