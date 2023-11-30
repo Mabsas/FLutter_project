@@ -142,89 +142,115 @@ class Booklist extends StatelessWidget {
           )
         ],
       ),
-      body: Column(
-        // FIRST CARD FIRST BOOK
-        children: [
-          Card(
+      body: Padding(padding: const EdgeInsets.all(8.0),
+        // FIRST container FIRST BOOK
+        child: SingleChildScrollView(child: 
+        Column(
+          children: [
+          Container(
+            margin: EdgeInsets.only(bottom:11),
+            height: 180,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
+
             child: ListTile(
               leading: Image.asset(
                 books[0].bookcover,
-                width: 70,
-                height: 70,
+                //width: 100,
+                height: 50,
                 fit: BoxFit.cover,
               ),
               title: Text(books[0].bookname),
               subtitle: Text(
                   'Author: ${books[0].author}\nRating: ${books[0].rating.toString()}'),
+                  trailing: Icon(Icons.favorite),
 
               //ontap function
             ),
           ),
 
-          //2nd CARD second book
-          Card(
+          //2nd conatiner second book
+          Container(
+          margin: EdgeInsets.only(bottom:11),
+            height: 180,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
+
+           
             child: ListTile(
               leading: Image.asset(
                 books[1].bookcover,
-                width: 70,
-                height: 70,
+                // width: 100,
+                height: 50,
                 fit: BoxFit.cover,
               ),
               title: Text(books[1].bookname),
               subtitle: Text(
                   'Author: ${books[1].author}\nRating: ${books[1].rating.toString()}'),
 
+              trailing: Icon(Icons.favorite),    
+
               //ontap function
             ),
           ),
 
+          //3rd container third book
+          Container(
+         margin: EdgeInsets.only(bottom:11),
+            height: 180,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
 
-
-           //3rd CARD third book
-          Card(
+           
             child: ListTile(
               leading: Image.asset(
                 books[2].bookcover,
-                width: 70,
-                height: 70,
+                // width: 100,
+                height: 50,
                 fit: BoxFit.cover,
               ),
               title: Text(books[2].bookname),
               subtitle: Text(
                   'Author: ${books[2].author}\nRating: ${books[2].rating.toString()}'),
+              
+              trailing: Icon(Icons.favorite),
 
               //ontap function
             ),
           ),
 
+          //4th container 4th book
+          Container(
+           margin: EdgeInsets.only(bottom:11),
+            height: 180,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
 
-
-           //4th CARD 4th book
-          Card(
+            
             child: ListTile(
               leading: Image.asset(
                 books[3].bookcover,
-                width: 70,
-                height: 70,
+                //width: 100,
+                height: 50,
                 fit: BoxFit.cover,
               ),
               title: Text(books[3].bookname),
               subtitle: Text(
                   'Author: ${books[3].author}\nRating: ${books[3].rating.toString()}'),
 
+              trailing: Icon(Icons.favorite),
+
               //ontap function
             ),
           ),
 
-
-
-           //5th CARD 5th book
-          Card(
+          //5th containe 5th book
+          Container(
+            margin: EdgeInsets.only(bottom:11),
+            height: 180,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
+           
             child: ListTile(
               leading: Image.asset(
                 books[4].bookcover,
-                width: 70,
-                height: 70,
+                //width: 100,
+                height: 50,
                 fit: BoxFit.cover,
               ),
               title: Text(books[4].bookname),
@@ -235,6 +261,9 @@ class Booklist extends StatelessWidget {
             ),
           ),
         ],
+        ),
+        
+      ),
       ),
     );
   }
