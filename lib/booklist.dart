@@ -176,7 +176,64 @@ class Booklist extends StatelessWidget {
 
               //ontap function
             ),
-          )
+          ),
+
+
+
+           //3rd CARD third book
+          Card(
+            child: ListTile(
+              leading: Image.asset(
+                books[2].bookcover,
+                width: 70,
+                height: 70,
+                fit: BoxFit.cover,
+              ),
+              title: Text(books[2].bookname),
+              subtitle: Text(
+                  'Author: ${books[2].author}\nRating: ${books[2].rating.toString()}'),
+
+              //ontap function
+            ),
+          ),
+
+
+
+           //4th CARD 4th book
+          Card(
+            child: ListTile(
+              leading: Image.asset(
+                books[3].bookcover,
+                width: 70,
+                height: 70,
+                fit: BoxFit.cover,
+              ),
+              title: Text(books[3].bookname),
+              subtitle: Text(
+                  'Author: ${books[3].author}\nRating: ${books[3].rating.toString()}'),
+
+              //ontap function
+            ),
+          ),
+
+
+
+           //5th CARD 5th book
+          Card(
+            child: ListTile(
+              leading: Image.asset(
+                books[4].bookcover,
+                width: 70,
+                height: 70,
+                fit: BoxFit.cover,
+              ),
+              title: Text(books[4].bookname),
+              subtitle: Text(
+                  'Author: ${books[4].author}\nRating: ${books[1].rating.toString()}'),
+
+              //ontap function
+            ),
+          ),
         ],
       ),
     );
