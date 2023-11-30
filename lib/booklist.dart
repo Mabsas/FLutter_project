@@ -147,8 +147,18 @@ class Booklist extends StatelessWidget {
         child: SingleChildScrollView(child: 
         Column(
           children: [
+            TextField(decoration: InputDecoration(
+                      filled: true,
+                      fillColor: const Color.fromARGB(230, 201, 196, 236),
+                      prefixIcon: const Icon(Icons.search),
+                      hintText: "Looking for something?",
+                      hintStyle: const TextStyle(fontStyle: FontStyle.italic),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                          borderSide: BorderSide.none)),
+                          ),
           Container(
-            margin: EdgeInsets.only(bottom:11),
+            margin: EdgeInsets.only(top: 10),     //upor theke 10 distance faka
             height: 180,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
 
@@ -170,7 +180,7 @@ class Booklist extends StatelessWidget {
 
           //2nd conatiner second book
           Container(
-          margin: EdgeInsets.only(bottom:11),
+          margin: EdgeInsets.only(top: 10),   //upor theke 10 distance faka
             height: 180,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
 
@@ -182,7 +192,7 @@ class Booklist extends StatelessWidget {
                 height: 50,
                 fit: BoxFit.cover,
               ),
-              title: Text(books[1].bookname),
+              title: Text(books[1].bookname), 
               subtitle: Text(
                   'Author: ${books[1].author}\nRating: ${books[1].rating.toString()}'),
 
@@ -194,7 +204,7 @@ class Booklist extends StatelessWidget {
 
           //3rd container third book
           Container(
-         margin: EdgeInsets.only(bottom:11),
+         margin: EdgeInsets.only(top: 10),    //upor theke 10 distance faka
             height: 180,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
 
@@ -218,7 +228,7 @@ class Booklist extends StatelessWidget {
 
           //4th container 4th book
           Container(
-           margin: EdgeInsets.only(bottom:11),
+           margin: EdgeInsets.only(top: 10),    //upor theke 10 distance faka
             height: 180,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
 
@@ -242,7 +252,7 @@ class Booklist extends StatelessWidget {
 
           //5th containe 5th book
           Container(
-            margin: EdgeInsets.only(bottom:11),
+            margin: EdgeInsets.only(top: 10),     //upor theke 10 distance faka
             height: 180,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
            
@@ -256,7 +266,8 @@ class Booklist extends StatelessWidget {
               title: Text(books[4].bookname),
               subtitle: Text(
                   'Author: ${books[4].author}\nRating: ${books[1].rating.toString()}'),
-
+              
+              trailing: Icon(Icons.favorite),
               //ontap function
             ),
           ),
