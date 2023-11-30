@@ -44,6 +44,23 @@ class AboutBook extends StatelessWidget {
             ],
           ),
         ),
+        DropdownButton(
+          hint: const Text("PPPP"),
+          icon: const Icon(Icons.keyboard_arrow_down),
+          items: const [
+            DropdownMenuItem(
+              value: 45.86,
+              child:  Text("Price"),
+            ),
+          ],
+          onChanged: (value) {},
+        ),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: const Text("Go back"),
+        )
       ]),
     );
   }
