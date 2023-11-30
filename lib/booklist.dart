@@ -142,139 +142,148 @@ class Booklist extends StatelessWidget {
           )
         ],
       ),
-      body: Padding(padding: const EdgeInsets.all(8.0),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
         // FIRST container FIRST BOOK
-        child: SingleChildScrollView(child: 
-        Column(
-          children: [
-            TextField(decoration: InputDecoration(
-                      filled: true,
-                      fillColor: const Color.fromARGB(230, 201, 196, 236),
-                      prefixIcon: const Icon(Icons.search),
-                      hintText: "Looking for something?",
-                      hintStyle: const TextStyle(fontStyle: FontStyle.italic),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                          borderSide: BorderSide.none)),
-                          ),
-          Container(
-            margin: EdgeInsets.only(top: 10),     //upor theke 10 distance faka
-            height: 180,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
-
-            child: ListTile(
-              leading: Image.asset(
-                books[0].bookcover,
-                //width: 100,
-                height: 50,
-                fit: BoxFit.cover,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              TextField(
+                decoration: InputDecoration(
+                    //functinality add remaining
+                    filled: true,
+                    fillColor: const Color.fromARGB(230, 201, 196, 236),
+                    prefixIcon: const Icon(Icons.search),
+                    hintText: "Looking for something?",
+                    hintStyle: const TextStyle(fontStyle: FontStyle.italic),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                        borderSide: BorderSide.none)),
               ),
-              title: Text(books[0].bookname),
-              subtitle: Text(
-                  'Author: ${books[0].author}\nRating: ${books[0].rating.toString()}'),
+              Container(
+                margin: EdgeInsets.only(top: 10), //upor theke 10 distance faka
+                height: 180,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Color.fromARGB(255, 186, 149, 207)),
+
+                child: ListTile(
+                  leading: Image.asset(
+                    books[0].bookcover,
+                    //width: 100,
+                    height: 50,
+                    fit: BoxFit.cover,
+                  ),
+                  title: Text(books[0].bookname),
+                  subtitle: Text(
+                      'Author: ${books[0].author}\nRating: ${books[0].rating.toString()}'),
                   trailing: Icon(Icons.favorite),
 
-              //ontap function
-            ),
-          ),
-
-          //2nd conatiner second book
-          Container(
-          margin: EdgeInsets.only(top: 10),   //upor theke 10 distance faka
-            height: 180,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
-
-           
-            child: ListTile(
-              leading: Image.asset(
-                books[1].bookcover,
-                // width: 100,
-                height: 50,
-                fit: BoxFit.cover,
+                  //ontap function
+                ),
               ),
-              title: Text(books[1].bookname), 
-              subtitle: Text(
-                  'Author: ${books[1].author}\nRating: ${books[1].rating.toString()}'),
 
-              trailing: Icon(Icons.favorite),    
+              //2nd conatiner second book
+              Container(
+                margin: EdgeInsets.only(top: 10), //upor theke 10 distance faka
+                height: 180,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Color.fromARGB(255, 186, 149, 207)),
 
-              //ontap function
-            ),
-          ),
+                child: ListTile(
+                  leading: Image.asset(
+                    books[1].bookcover,
+                    // width: 100,
+                    height: 50,
+                    fit: BoxFit.cover,
+                  ),
+                  title: Text(books[1].bookname),
+                  subtitle: Text(
+                      'Author: ${books[1].author}\nRating: ${books[1].rating.toString()}'),
 
-          //3rd container third book
-          Container(
-         margin: EdgeInsets.only(top: 10),    //upor theke 10 distance faka
-            height: 180,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
+                  trailing: Icon(Icons.favorite),
 
-           
-            child: ListTile(
-              leading: Image.asset(
-                books[2].bookcover,
-                // width: 100,
-                height: 50,
-                fit: BoxFit.cover,
+                  //ontap function
+                ),
               ),
-              title: Text(books[2].bookname),
-              subtitle: Text(
-                  'Author: ${books[2].author}\nRating: ${books[2].rating.toString()}'),
-              
-              trailing: Icon(Icons.favorite),
 
-              //ontap function
-            ),
-          ),
+              //3rd container third book
+              Container(
+                margin: EdgeInsets.only(top: 10), //upor theke 10 distance faka
+                height: 180,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Color.fromARGB(255, 186, 149, 207)),
 
-          //4th container 4th book
-          Container(
-           margin: EdgeInsets.only(top: 10),    //upor theke 10 distance faka
-            height: 180,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
+                child: ListTile(
+                  leading: Image.asset(
+                    books[2].bookcover,
+                    // width: 100,
+                    height: 50,
+                    fit: BoxFit.cover,
+                  ),
+                  title: Text(books[2].bookname),
+                  subtitle: Text(
+                      'Author: ${books[2].author}\nRating: ${books[2].rating.toString()}'),
 
-            
-            child: ListTile(
-              leading: Image.asset(
-                books[3].bookcover,
-                //width: 100,
-                height: 50,
-                fit: BoxFit.cover,
+                  trailing: Icon(Icons.favorite),
+
+                  //ontap function
+                ),
               ),
-              title: Text(books[3].bookname),
-              subtitle: Text(
-                  'Author: ${books[3].author}\nRating: ${books[3].rating.toString()}'),
 
-              trailing: Icon(Icons.favorite),
+              //4th container 4th book
+              Container(
+                margin: EdgeInsets.only(top: 10), //upor theke 10 distance faka
+                height: 180,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Color.fromARGB(255, 186, 149, 207)),
 
-              //ontap function
-            ),
-          ),
+                child: ListTile(
+                  leading: Image.asset(
+                    books[3].bookcover,
+                    //width: 100,
+                    height: 50,
+                    fit: BoxFit.cover,
+                  ),
+                  title: Text(books[3].bookname),
+                  subtitle: Text(
+                      'Author: ${books[3].author}\nRating: ${books[3].rating.toString()}'),
 
-          //5th containe 5th book
-          Container(
-            margin: EdgeInsets.only(top: 10),     //upor theke 10 distance faka
-            height: 180,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Color.fromARGB(255, 186, 149, 207)),
-           
-            child: ListTile(
-              leading: Image.asset(
-                books[4].bookcover,
-                //width: 100,
-                height: 50,
-                fit: BoxFit.cover,
+                  trailing: Icon(Icons.favorite),
+
+                  //ontap function
+                ),
               ),
-              title: Text(books[4].bookname),
-              subtitle: Text(
-                  'Author: ${books[4].author}\nRating: ${books[1].rating.toString()}'),
-              
-              trailing: Icon(Icons.favorite),
-              //ontap function
-            ),
+
+              //5th containe 5th book
+              Container(
+                margin: EdgeInsets.only(top: 10), //upor theke 10 distance faka
+                height: 180,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Color.fromARGB(255, 186, 149, 207)),
+
+                child: ListTile(
+                  leading: Image.asset(
+                    books[4].bookcover,
+                    //width: 100,
+                    height: 50,
+                    fit: BoxFit.cover,
+                  ),
+                  title: Text(books[4].bookname),
+                  subtitle: Text(
+                      'Author: ${books[4].author}\nRating: ${books[1].rating.toString()}'),
+
+                  trailing: Icon(Icons.favorite),
+                  //ontap function
+                ),
+              ),
+            ],
           ),
-        ],
         ),
-        
-      ),
       ),
     );
   }
