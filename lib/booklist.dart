@@ -1,3 +1,4 @@
+import 'package:appi_co/About.dart';
 import 'package:appi_co/bookdata.dart';
 import 'package:flutter/material.dart';
 
@@ -117,6 +118,11 @@ class Booklist extends StatelessWidget {
         "Joe Abercrombie", 4.3)
   ];
 
+  final List<AboutBook> about = [
+    AboutBook("assets/author/George R.R Martin.jpg", "Author : George R.R. Martin",
+        "\n Bookreview : \n The summer after his first year at Hogwarts is worse than ever for Harry Potter. The Dursleys of Privet Drive are more horrible to him than ever before. And just when he thinks the endless summer vacation is over, a creature named Dobby the house-elf shows up issuing a grave warning to Harry not to go back to school or disaster will happen Of course, Harry has to go back- and he does so in grand style, in a flying-car magicked by his friends Ron and Percy Weasley. But getting back to Hogwarts isn't the cure Harry expects it to be. Almost immediately a student is found turned to stone, and then another. And somehow Harry stands accused. Could Harry Potter be the long-feared heir of Slytherin?Harry and friends Hermione and Fred are stretched to their limits in a desperate fight against Draco Malfoy and his gang, the hideously stuck-up new professor Gilderoy Lockheart, the malevolent owner of the diary of Tom Riddle, giant spiders, and perhaps even...Hagrid This is the book that proves J.K. Rowling is a talent that's here to stay")
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -180,6 +186,10 @@ class Booklist extends StatelessWidget {
                   trailing: Icon(Icons.favorite),
 
                   //ontap function
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => about[0]));
+                  },
                 ),
               ),
 
