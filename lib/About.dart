@@ -5,15 +5,14 @@ class AboutBook extends StatelessWidget {
   final String name;
   final String description;
 
-  AboutBook(this.writer, this.name, this.description);
+  const AboutBook(this.writer, this.name, this.description, {super.key});
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'My___bOOklet',
+          'LeT uS lOoK iNsidE...',
           style: TextStyle(
               color: Colors.black,
               fontSize: 18,
@@ -23,15 +22,29 @@ class AboutBook extends StatelessWidget {
         backgroundColor: const Color.fromARGB(133, 217, 108, 208),
         centerTitle: true,
       ),
-      /*body: ListView(children: [
+      body: ListView(children: [
         Container(
-          margin: EdgeInsets.only(top: 10),
+          margin: const EdgeInsets.only(top: 10),
           height: 300,
           width: 300,
-
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start,children: [],),
-        )
-      ]),*/
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(
+                writer,
+                height: 200,
+                fit: BoxFit.cover,
+              ),
+              Text(
+                "Composed by : $name",
+                style: const TextStyle(fontStyle: FontStyle.italic),
+              ),
+              Text("Bookoverview: $description",
+                  style: const TextStyle(fontStyle: FontStyle.italic))
+            ],
+          ),
+        ),
+      ]),
     );
   }
 }
